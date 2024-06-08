@@ -1,0 +1,163 @@
+.contact-card {
+  padding: 1.875rem 1.5rem;
+  border-radius: 15px;
+  background-color: var(--white);
+}
+
+.form-title {
+  color: var(--grey-900);
+  letter-spacing: -0.5px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.required {
+  color: var(--green-600);
+}
+
+.error-alert {
+  margin-top: 8px;
+  margin-left: 6px;
+  color: var(--red);
+  font-size: 14px;
+}
+
+.error-input {
+  border: 1px solid var(--red) !important;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  margin-top: 2rem;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--grey-900);
+  font-size: 0.9rem;
+}
+
+.form-input input,
+.form-input textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--grey-500);
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  transition: outline 0.2s ease-in-out;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+}
+
+.form-input input:active,
+.form-input input:focus,
+.form-input textarea:active .form-input textarea:focus {
+  outline: 1px solid var(--green-600);
+}
+.form-input input:hover,
+.form-input textarea:hover {
+  outline: 1px solid var(--green-600);
+}
+
+.form-input textarea {
+  height: 8rem;
+  resize: none;
+  transition: outline 0.2s ease-in-out;
+}
+.form-input textarea:active,
+.form-input textarea:focus {
+  outline: 1px solid var(--green-600);
+}
+
+.form-input .radio-input input {
+  width: auto;
+  height: 14px;
+  margin: 0;
+  outline: none;
+  accent-color: var(--green-600);
+}
+
+.form-input .radio-input:hover {
+  outline: 1px solid var(--green-600);
+}
+
+.radio-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 14px 16px;
+  margin-top: 12px;
+  border: 1px solid var(--grey-500);
+  border-radius: 8px;
+  gap: 12px;
+}
+.radio-input:hover {
+  cursor: pointer;
+}
+.checked-input {
+  background-color: var(--green-200);
+}
+
+.query-input-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.consent-check {
+  display: flex;
+  align-items: center;
+  line-height: 1.25;
+  margin-top: 40px;
+  gap: 16px;
+}
+.consent-check label {
+  cursor: pointer;
+}
+#consent {
+  accent-color: var(--green-600);
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 16px;
+  margin-top: 32px;
+  border: 1px solid var(--grey-500);
+  border-radius: 8px;
+  color: var(--green-200);
+  background-color: var(--green-600);
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  font-family: "Karla", sans-serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 630px) {
+  .contact-card {
+    padding: 2em 2rem;
+  }
+  .row {
+    flex-direction: row;
+    gap: 12px;
+  }
+  .row > * {
+    flex: 1;
+  }
+  .query-input-row {
+    flex-direction: row;
+    gap: 12px;
+  }
+}
