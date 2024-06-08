@@ -107,11 +107,11 @@ const ContactForm = () => {
         </div>
 
         <div className="form-input">
-          <label htmlFor="queryType" className="input-label">
+          <label className="input-label">
             Query Type <span className="required">*</span>
           </label>
           <div className="query-input-row">
-            <div
+            <label
               className={
                 errors.option
                   ? "radio-input error-input"
@@ -122,14 +122,15 @@ const ContactForm = () => {
             >
               <input
                 type="radio"
-                name="queryType"
+                id="genEnq"
                 value="generalEnquiry"
                 {...register("option", { required: true })}
                 aria-invalid={errors.option ? "true" : "false"}
               />{" "}
               <span>General Enquiry</span>
-            </div>
-            <div
+            </label>
+            <label
+              htmlFor="supportReq"
               className={
                 errors.option
                   ? "radio-input error-input"
@@ -140,14 +141,13 @@ const ContactForm = () => {
             >
               <input
                 type="radio"
-                name="queryType"
-                className="radio-input"
+                id="supportReq"
                 value="supportRequest"
                 {...register("option", { required: true })}
                 aria-invalid={errors.option ? "true" : "false"}
               />{" "}
               <span>Support Request</span>
-            </div>
+            </label>
           </div>
           {errors.option && (
             <p role="alert" className="error-alert">
